@@ -16,7 +16,6 @@ body {
   color: var(--primary-red);
 }
 
-
 .app-container {
   display: flex;
   flex-direction: column;
@@ -52,4 +51,19 @@ body {
   padding: 1rem;
   font-size: 0.9rem;
   color: var(--primary-red);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 1rem; 
+    font-size: 0.95rem; 
+  }
+
+  .footer {
+    font-size: 0.8rem; 
+  }
 }
