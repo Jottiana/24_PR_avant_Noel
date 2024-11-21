@@ -1,0 +1,29 @@
+:root {
+    --primary-red: #B22222;
+    --dark-olive: #556B2F;
+    --light-cornsilk: #FFF8DC;
+    --beige: #E6D699;
+    --light-gray: #D3D3D3;
+  
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Cormorant Infant', serif;
+  }
+
+  .nav-container{
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-red);
+    color: var(--light-cornsilk);
+    font-family: var(--font-heading);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.1rem;
+    position: absolute;
+    bottom: 45px;
+  }
+
+  .my-button-container {
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+  }

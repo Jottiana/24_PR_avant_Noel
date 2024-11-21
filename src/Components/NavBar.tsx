@@ -3,6 +3,7 @@ import "./NavBar.css";
 function NavBar() {
     return (
       <>
+      <section className="nav-container">
       <h3>Choisis une case bonus en plus</h3>
 
         <div className="my-button-container">
@@ -12,6 +13,7 @@ function NavBar() {
           <button type="button" className="rennegris">⚪</button>
           <button type="button" className="tableau">🔲</button>
         </div>
+        </section>
       </>
     );
   }
