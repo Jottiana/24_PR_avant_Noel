@@ -20,16 +20,12 @@ const App = () => {
 				<div className="homepage-card">
 					<CalendarCard day={1} isActive={true} onClick={handleCardClick} />
 				</div>
-				<div className="link-container">
-					<Link to="/calendar">Voir le calendrier complet</Link>
-				</div>
+				<Link to="/calendar" className="link-to-calendar">Voir le calendrier complet</Link>
+
 			</main>
 			<nav className="nav-container">
 				<NavBar />
 			</nav>
-			<footer className="footer">
-				<p>&copy; 2024 - Joyeuses fêtes !</p>
-			</footer>
 		</div>
 	);
 };
