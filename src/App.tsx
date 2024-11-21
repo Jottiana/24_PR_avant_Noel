@@ -8,8 +8,10 @@ function App() {
 				<h1 className="title">24 PR avant Noël</h1>
 			</header>
 			<main className="content">
-				<p>Bienvenue sur le site où chaque jour compte avant Noël !</p>
-				<div className="calender">
+				<p className="intro-title">
+					Bienvenue sur le site où chaque jour compte avant Noël !
+				</p>
+				<div className="calendar-container">
 					<Calendar />
 				</div>
 			</main>

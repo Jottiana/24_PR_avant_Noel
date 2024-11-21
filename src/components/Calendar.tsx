@@ -2,7 +2,7 @@ import type React from "react";
 import "./Calendar.css";
 
 const Calendar: React.FC = () => {
-	const daysInMonth = 31;
+	const daysInMonth = 24;
 
 	const renderDays = () => {
 		const days = [];
