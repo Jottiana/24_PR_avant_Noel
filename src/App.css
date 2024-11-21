@@ -45,6 +45,11 @@ body {
   color: var(--dark-olive);
 }
 
+.p {
+  
+  font-size: 3rem;
+}
+
 .footer {
   background-color: var(--light-gray);
   text-align: center;
