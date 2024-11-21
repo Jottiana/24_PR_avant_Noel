@@ -13,7 +13,9 @@ const App = () => {
 			<h1>24 PR avant Noël</h1>
 			<main>
 				<div className="content">
-					<p>Bienvenue sur le site où chaque jour compte avant Noël !</p>
+					<p className="intro-title">
+						Bienvenue sur le site où chaque jour compte avant Noël !
+					</p>
 					<div className="homepage-card">
 						<CalendarCard day={1} isActive={true} onClick={handleCardClick} />
 					</div>
