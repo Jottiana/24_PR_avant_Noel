@@ -25,6 +25,7 @@ body {
 	flex-direction: column;
 	background-color: var(--light-cornsilk);
 	color: var(--primary-red);
+  min-height: 100vh;
 }
 
 .header {

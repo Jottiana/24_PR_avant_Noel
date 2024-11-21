@@ -6,19 +6,19 @@ type CalendarCardProps = {
   onClick: () => void;
 };
 
-const CalendarCard = ({ day, isActive, onClick }: CalendarCardProps) => {
+const CalendarCard = ({ day, onClick }: CalendarCardProps) => {
   return (
-    <button
-      type="button"
-      className={`calendar-card ${isActive ? "active" : ""}`}
-      onClick={onClick}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") onClick();
-      }}
-    >
-      <p className="calendar-day">{day}</p>
-    </button>
+    <div className="snow-globe" type= "button" onClick={onClick}>
+      <div className="snow-ball">
+        <p className="day-number">{day}</p>
+      </div>
+      <div className="base"></div>
+    </div>
   );
 };
 
 export default CalendarCard;
+
+
+
+

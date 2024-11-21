@@ -1,14 +1,3 @@
-:root {
-    --primary-red: #B22222;
-    --dark-olive: #556B2F;
-    --light-cornsilk: #FFF8DC;
-    --beige: #E6D699;
-    --light-gray: #D3D3D3;
-  
-    --font-heading: 'Cinzel', serif;
-    --font-body: 'Cormorant Infant', serif;
-  }
-
   .nav-container{
     width: 100%;
     height: auto;
@@ -18,9 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.1rem;
+    margin: 0;
     position: absolute;
-    bottom: 45px;
+    bottom: 22px;
   }
 
   .my-button-container {
