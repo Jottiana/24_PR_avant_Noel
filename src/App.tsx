@@ -11,7 +11,7 @@ function App() {
 				<div className="content">
 					<p>Bienvenue sur le site où chaque jour compte avant Noël !</p>
 				</div>
-				<NavBar />
+				<NavBar onNavBarClick={handleNavBarClick} />
 			</main>
 			<footer className="footer">
 				<p>&copy; 2024 - Joyeuses fêtes !</p>
