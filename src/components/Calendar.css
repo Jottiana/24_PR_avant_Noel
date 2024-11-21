@@ -7,6 +7,7 @@
 }
 .content {
 	background-image: url("../assets/christmas-background.jpg");
+	/* background-image: url("https://cdn.discordapp.com/attachments/1309086633450012773/1309261534886887424/image.png?ex=6740f052&is=673f9ed2&hm=e4d363095a7840bfdb2794b53142b88eb9c04321f3c2504a7ce2ee4ab631333a&"); */
 	object-fit: fill;
 	color: var(--primary-red);
 }

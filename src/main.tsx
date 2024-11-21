@@ -2,18 +2,20 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
+import CalendarPage from "./pages/CalendarPage.tsx"; 
 import "./index.css";
 
 const router = createBrowserRouter(
 	[
 		{
-			path: "/",
+			path: "/", 
 			element: <App />,
 		},
+		{
+			path: "/calendar", 
+			element: <CalendarPage />,
+		},
 	],
-	// {
-	//   basename: "/24_PR_avant_Noel",
-	// }
 	{
 		future: {
 			v7_relativeSplatPath: true,
@@ -34,5 +36,5 @@ if (!rootElement) {
 createRoot(rootElement).render(
 	<StrictMode>
 		<RouterProvider router={router} />
-	</StrictMode>,
+	</StrictMode>
 );
