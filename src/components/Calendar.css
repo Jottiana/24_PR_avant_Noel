@@ -1,0 +1,66 @@
+:root {
+	--primary-red: #b22222;
+	--dark-olive: #556b2f;
+	--light-cornsilk: #fff8dc;
+	--beige: #e6d699;
+	--light-gray: #d3d3d3;
+}
+.content {
+	background-image: url("../assets/christmas-background.jpg");
+	object-fit: fill;
+	color: var(--primary-red);
+}
+.intro-title {
+	margin-top: 20px;
+	background-color: var(--beige);
+	border-radius: 10px;
+	height: 35px;
+	line-height: 35px;
+}
+.calendar-container {
+	padding-top: 35px;
+	display: flex;
+	justify-content: center;
+}
+
+.calendar {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-width: 800px;
+	gap: 5px;
+	margin-bottom: 25px;
+}
+
+.day {
+	border: 1px solid var(--dark-olive);
+	box-sizing: border-box;
+	flex: 1 0 19%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	cursor: pointer;
+	background-color: var(--beige);
+	border-radius: 25px;
+}
+@media screen and (max-width: 500px) {
+	.calendar-container {
+		display: flex;
+		justify-content: center;
+	}
+	.calendar {
+		min-width: 360px;
+	}
+	.day {
+		height: 65px;
+		flex: 1 0 18%;
+		font-size: 18px;
+		border-radius: 15px;
+	}
+}
+
+.day:hover {
+	background-color: var(--dark-olive);
+}

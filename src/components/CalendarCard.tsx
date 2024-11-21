@@ -8,7 +8,7 @@ type CalendarCardProps = {
 
 const CalendarCard = ({ day, onClick }: CalendarCardProps) => {
   return (
-    <div className="snow-globe" type= "button" onClick={onClick}>
+    <div className="snow-globe" onClick={onClick}>
       <div className="snow-ball">
         <p className="day-number">{day}</p>
       </div>
