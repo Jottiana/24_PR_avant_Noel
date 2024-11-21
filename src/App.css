@@ -1,48 +1,52 @@
 :root {
-  --primary-red: #B22222;
-  --dark-olive: #556B2F;
-  --light-cornsilk: #FFF8DC;
-  --beige: #E6D699;
-  --light-gray: #D3D3D3;
+	--primary-red: #b22222;
+	--dark-olive: #556b2f;
+	--light-cornsilk: #fff8dc;
+	--beige: #e6d699;
+	--light-gray: #d3d3d3;
 
-  --font-heading: 'Cinzel', serif;
-  --font-body: 'Cormorant Infant', serif;
+	--font-heading: "Cinzel", serif;
+	--font-body: "Cormorant Infant", serif;
+}
+
+* {
+	box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  font-family: var(--font-body);
-  background-color: var(--light-cornsilk);
-  color: var(--primary-red);
+	font-family: var(--font-body);
+	background-color: var(--light-cornsilk);
+	color: var(--primary-red);
 }
 
 .app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: var(--light-cornsilk);
-  color: var(--primary-red);
+	display: flex;
+	flex-direction: column;
+	background-color: var(--light-cornsilk);
+	color: var(--primary-red);
 }
 
 .header {
-  background-color: var(--primary-red);
-  color: var(--light-cornsilk);
-  text-align: center;
-  padding: 1rem;
+	background-color: var(--primary-red);
+	color: var(--light-cornsilk);
+	text-align: center;
+	padding: 1rem;
 }
 
 .title {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  margin: 0;
+	font-family: var(--font-heading);
+	font-size: 2.5rem;
+	margin: 0;
 }
 
 .content {
-  flex: 1; 
-  padding: 2rem;
-  text-align: center;
-  font-family: var(--font-body);
-  color: var(--dark-olive);
+	flex: 1;
+	padding: 2rem;
+	text-align: center;
+	font-family: var(--font-body);
+	color: var(--dark-olive);
+  position: relative;
 }
 
 .p {
@@ -57,24 +61,28 @@ body {
 }
 
 .footer {
-  background-color: var(--light-gray);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: var(--primary-red);
+	background-color: var(--light-gray);
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.9rem;
+	color: var(--primary-red);
+  position: absolute;
+  bottom: 0; 
+  left: 0; 
+  right: 0
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
+	.title {
+		font-size: 2rem;
+	}
 
-  .content {
-    padding: 1rem; 
-    font-size: 0.95rem; 
-  }
+	.content {
+		padding: 1rem;
+		font-size: 0.95rem;
+	}
 
-  .footer {
-    font-size: 0.8rem; 
-  }
+	.footer {
+		font-size: 0.8rem;
+	}
 }
