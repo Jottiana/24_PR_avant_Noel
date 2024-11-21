@@ -4,7 +4,7 @@ function NavBar() {
     return (
       <>
       <section className="nav-container">
-      <h3>Choisis une case bonus en plus</h3>
+      <h2>Choisis une case bonus en plus</h2>
 
         <div className="my-button-container">
           <button type="button" className="rennevert">🟢</button>
