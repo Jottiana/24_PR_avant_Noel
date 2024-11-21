@@ -1,8 +1,16 @@
 import CalendarCard from "./components/CalendarCard";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Calendar from "./components/Calendar";
+import Calendar from "./components/Testcalendar";
 
+/* tableau placeholder pour les tests, à remplacer par une méthode de validation plus "propre" en lien avec la calendarcard */
+const validation = [
+	{ day: 2, status: "success" },
+	{ day: 9, status: "failure" },
+	{ day: 11, status: "failure" },
+	{ day: 17, status: "success" },
+];
+/* ensuite envoyé à calendar en bas */
 const App = () => {
 	const handleCardClick = () => {
 		console.log("Card clicked!");
@@ -20,7 +28,7 @@ const App = () => {
 						<CalendarCard day={1} isActive={true} onClick={handleCardClick} />
 					</div>
 					<div className="calendar-container">
-						<Calendar />
+						<Calendar validations={validation} />
 					</div>
 					<NavBar />
 				</div>

@@ -61,6 +61,15 @@
 	}
 }
 
-.day:hover {
+.day.success {
 	background-color: var(--dark-olive);
+	color: var(--beige);
+}
+.day.failure {
+	background-color: var(--primary-red);
+	color: var(--beige);
+}
+
+.day:hover {
+	background-color: var(--light-cornsilk);
 }
