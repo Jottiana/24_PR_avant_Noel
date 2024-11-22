@@ -1,7 +1,9 @@
 .content {
-	background-image: url("../assets/christmas-background.jpg");
-	object-fit: fill;
+	background-image: url("../assets/A festive Christmas-themed background in vibrant red.webp");
 	color: var(--primary-red);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .intro-title {
 	margin-top: 20px;

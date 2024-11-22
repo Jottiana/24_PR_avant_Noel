@@ -5,7 +5,7 @@
   align-items: center;
   cursor: pointer;
   background-color: transparent;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 10px;
   border-radius: 50%;
 }
