@@ -1,4 +1,4 @@
-import "./CalendarPage.css"; 
+import "./CalendarPage.css";
 import Calendar from "../components/Calendar";
 
 const CalendarPage = () => {

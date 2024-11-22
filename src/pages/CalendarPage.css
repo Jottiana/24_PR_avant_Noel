@@ -3,17 +3,12 @@
 	object-fit: fill;
 	color: var(--primary-red);
 }
-.intro-title {
+.title {
 	margin-top: 20px;
 	background-color: var(--beige);
 	border-radius: 10px;
 	height: 35px;
 	line-height: 35px;
-}
-.calendar-container {
-	padding-top: 35px;
-	display: flex;
-	justify-content: center;
 }
 
 .calendar {
@@ -44,7 +39,7 @@
 		justify-content: center;
 	}
 	.calendar {
-		min-width: 360px;
+		min-width: 345px;
 	}
 	.day {
 		height: 65px;
