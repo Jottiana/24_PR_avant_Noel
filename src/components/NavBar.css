@@ -13,4 +13,32 @@
 .my-button-container {
   text-decoration: none;
   padding-bottom: 0.5rem;
+  background-color: none;
+  position: absolute;
+  bottom: 65px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--light-cornsilk);
+  cursor: pointer;
+}
+
+.navbar-title {
+  margin-top: 5px;
+  background-color: var(--beige);
+  border-radius: 10px;
+  height: 35px;
+  line-height: 35px;
+  color: var(--dark-olive);
+  width: 70%;
+  text-align: center;
 }
