@@ -53,8 +53,10 @@ const CalendarCard = ({ day }: CalendarCardProps) => {
           <p className="day-number">{day}</p>
         ) : (
           <>
-            <h2>{title}</h2>
-            <p className="description">{description}</p>
+            <div className="display-content">
+              <h2>{title}</h2>
+              <p className="description">{description}</p>
+            </div>
           </>
         )}
       </div>
