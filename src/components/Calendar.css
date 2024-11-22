@@ -12,6 +12,8 @@
   height: 35px;
   line-height: 35px;
   color: var(--dark-olive);
+  width: 80%;
+  margin-left: 10%;
 }
 .calendar-container {
   padding-top: 35px;
