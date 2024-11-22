@@ -1,60 +1,60 @@
-.content {
-	background-image: url("../assets/christmas-background.jpg");
-	object-fit: fill;
-	color: var(--primary-red);
-}
+/* .content {
+  background-image: url("../assets/christmas-background.jpg");
+  object-fit: fill;
+  color: var(--primary-red);
+} */
 .intro-title {
-	margin-top: 20px;
-	background-color: var(--beige);
-	border-radius: 10px;
-	height: 35px;
-	line-height: 35px;
-	color: var(--dark-olive);
+  margin-top: 5px;
+  background-color: var(--beige);
+  border-radius: 10px;
+  height: 35px;
+  line-height: 35px;
+  color: var(--dark-olive);
 }
 .calendar-container {
-	padding-top: 35px;
-	display: flex;
-	justify-content: center;
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
 }
 
 .calendar {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	min-width: 800px;
-	gap: 5px;
-	margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 800px;
+  gap: 5px;
+  margin-bottom: 25px;
 }
 
 .day {
-	border: 1px solid var(--dark-olive);
-	box-sizing: border-box;
-	flex: 1 0 19%;
-	height: 80px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 25px;
-	cursor: pointer;
-	background-color: var(--beige);
-	border-radius: 25px;
+  border: 1px solid var(--dark-olive);
+  box-sizing: border-box;
+  flex: 1 0 19%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: var(--beige);
+  border-radius: 25px;
 }
 @media screen and (max-width: 500px) {
-	.calendar-container {
-		display: flex;
-		justify-content: center;
-	}
-	.calendar {
-		min-width: 360px;
-	}
-	.day {
-		height: 65px;
-		flex: 1 0 18%;
-		font-size: 18px;
-		border-radius: 15px;
-	}
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+  }
+  .calendar {
+    min-width: 360px;
+  }
+  .day {
+    height: 65px;
+    flex: 1 0 18%;
+    font-size: 18px;
+    border-radius: 15px;
+  }
 }
 
 .day:hover {
-	background-color: var(--dark-olive);
+  background-color: var(--dark-olive);
 }

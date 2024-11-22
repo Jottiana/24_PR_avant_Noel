@@ -41,7 +41,6 @@ const CalendarCard = ({ day }: CalendarCardProps) => {
           handleCardClick();
         }
       }}
-      tabIndex={0}
     >
       <div className="snow-ball">
         <div className="snowflake" />
