@@ -7,44 +7,56 @@ type CalendarCardProps = {
 
 const CalendarCard = ({ day }: CalendarCardProps) => {
   const [isFetching, setIsFetching] = useState(false);
+  const [title, setTitle] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
+  const [showDate, setShowDate] = useState(true);
 
   const handleCardClick = async () => {
-    setIsFetching(true);
-    setDescription(null);
+    if (showDate) {
+      setIsFetching(true);
+      setShowDate(false);
 
-    setTimeout(async () => {
       try {
         const response = await fetch(
-          "https://mere-noel-api-v2.vercel.app/api/code/random"
+          `https://mere-noel-api-v2.vercel.app/api/dailycards/${day}`
         );
         const data = await response.json();
-        setDescription(data.message || "Pas de description disponible.");
+        setTitle(data.title || "Pas de titre disponible.");
+        setDescription(data.description || "Pas de description disponible.");
       } catch (error) {
+        setTitle("Erreur lors de la récupération des données.");
         setDescription("Erreur lors de la récupération des données.");
       } finally {
         setIsFetching(false);
       }
-    }, 500); 
+    }
   };
 
   return (
     <div
       className={`snow-globe ${isFetching ? "loading" : ""}`}
       onClick={handleCardClick}
+      onKeyUp={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          handleCardClick();
+        }
+      }}
+      tabIndex={0}
     >
       <div className="snow-ball">
-
         <div className="snowflake" />
         <div className="snowflake" />
         <div className="snowflake" />
         <div className="snowflake" />
         <div className="snowflake" />
 
-        {!description ? (
-          <p className="day-number">{isFetching ? "..." : day}</p>
+        {showDate ? (
+          <p className="day-number">{day}</p>
         ) : (
-          <p className="description">{description}</p>
+          <>
+            <h2>{title}</h2>
+            <p className="description">{description}</p>
+          </>
         )}
       </div>
       <div className="base" />
