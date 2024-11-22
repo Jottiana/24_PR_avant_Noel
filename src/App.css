@@ -26,8 +26,11 @@ body {
   background-color: var(--light-cornsilk);
   color: var(--primary-red);
   min-height: 100vh;
-  background-image: url("./assets/christmas-background.jpg");
+  background-image: url("https://cdn.discordapp.com/attachments/1309086633450012773/1309450860228771932/fond-confortable-hiver-details-decoration-festive-neige-table-bois-bokeh-concept-ambiance-festive-maison_169016-7266.jpg?ex=6741a0a5&is=67404f25&hm=b0d74a4ddcf8e35ed1193fa76355d891a8109b2b71c88dd44612f060f61fe962&");
   object-fit: fill;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
