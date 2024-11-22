@@ -11,7 +11,7 @@
 
 * {
 	box-sizing: border-box;
-  margin: 0;
+	margin: 0;
 }
 
 body {
@@ -25,6 +25,7 @@ body {
 	flex-direction: column;
 	background-color: var(--light-cornsilk);
 	color: var(--primary-red);
+	min-height: 100vh;
 }
 
 .header {
@@ -46,37 +47,37 @@ body {
 	text-align: center;
 	font-family: var(--font-body);
 	color: var(--dark-olive);
-  position: relative;
+  min-height: 80vh;
 }
 
-.p {
-  
-  font-size: 3rem;
+.link-to-calendar {
+	margin-top: 20px;
+	background-color: var(--beige);
+	border-radius: 10px;
+	padding: 10px;
+	line-height: 35px;
+	font-family: var(--font-body);
+	font-size: 1rem;
+	text-decoration: none;
+	color: var(--dark-olive);
 }
 
-.footer {
-	background-color: var(--light-gray);
-	text-align: center;
-	padding: 1rem;
-	font-size: 0.9rem;
-	color: var(--primary-red);
-  position: absolute;
+
+
+.nav-container {
+  position: sticky;
   bottom: 0; 
-  left: 0; 
-  right: 0
+  z-index: 10;
+  background-color: var(--primary-red);
 }
+
 
 @media (max-width: 768px) {
 	.title {
 		font-size: 2rem;
 	}
-
 	.content {
 		padding: 1rem;
 		font-size: 0.95rem;
 	}
-
-	.footer {
-		font-size: 0.8rem;
 	}
-}
