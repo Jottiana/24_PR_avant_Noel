@@ -1,19 +1,19 @@
-import type React from "react"; 
+import type React from "react";
 import { useState, useEffect, useCallback } from "react";
 import CalendarCard from "./components/CalendarCard";
 import "./App.css";
 import NavBar from "./components/NavBar";
 
+interface CardData {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+}
+
 const App = () => {
   const [cardData, setCardData] = useState<CardData | null>(null);
   const [showDate, setShowDate] = useState(true);
-
-  interface CardData {
-    id: number;
-    title: string;
-    description: string;
-    date: string;
-  }
 
   const fetchCardData = useCallback(async (endpoint: string): Promise<void> => {
     try {
@@ -23,7 +23,7 @@ const App = () => {
     } catch (error) {
       console.error("Error fetching card data:", error);
     }
-  };
+  }, []);
 
   const handleCardClick = () => {
     setShowDate(false);
@@ -56,13 +56,13 @@ const App = () => {
               onClick={handleCardClick}
             />
           </div>
-        <Link to="/calendar" className="link-to-calendar">
-          Voir le calendrier complet
-        </Link>
+          <Link to="/calendar" className="link-to-calendar">
+            Voir le calendrier complet
+          </Link>
         </div>
       </main>
       <nav className="nav-container">
-        <NavBar />
+        <NavBar onNavBarClick={handleNavBarClick} />
       </nav>
     </div>
   );
