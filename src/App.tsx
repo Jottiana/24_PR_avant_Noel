@@ -4,42 +4,42 @@ import CalendarCard from "./components/CalendarCard";
 import "./App.css";
 import NavBar from "./components/NavBar";
 
-const App = () => {
-  const [cardData, setCardData] = useState<CardData | null>(null);
-  const [showDate, setShowDate] = useState(true);
-
-  interface CardData {
+interface CardData {
     id: number;
     title: string;
     description: string;
     date: string;
   }
 
-  const fetchCardData = useCallback(async (endpoint: string): Promise<void> => {
-    try {
-      const response = await fetch(endpoint);
-      const data: CardData = await response.json();
-      setCardData(data);
-    } catch (error) {
-      console.error("Error fetching card data:", error);
-    }
-  };
-
-  const handleCardClick = () => {
-    setShowDate(false);
-  };
-
-  const handleNavBarClick = (endpoint: string): void => {
-    fetchCardData(endpoint);
-    setShowDate(false);
-  };
-
-  useEffect(() => {
-    const today = new Date().getDate();
-    fetchCardData(`/api/dailycards/${today}`);
-  }, [fetchCardData]);
-
-  const today = new Date().getDate();
+  const App = () => {
+	const [cardData, setCardData] = useState<CardData | null>(null);
+	const [showDate, setShowDate] = useState(true);
+  
+	const fetchCardData = useCallback (async (endpoint: string): Promise<void> => {
+	  try {
+		const response = await fetch(endpoint);
+		const data: CardData = await response.json();
+		setCardData(data);
+	  } catch (error) {
+		console.error("Error fetching card data:", error);
+	  }
+	}, []);
+  
+	const handleCardClick = () => {
+	  setShowDate(false);
+	};
+  
+	const handleNavBarClick = (endpoint: string): void => {
+	  fetchCardData(endpoint);
+	  setShowDate(false);
+	};
+  
+	useEffect(() => {
+	  const today = new Date().getDate();
+	  fetchCardData(`/api/dailycards/${today}`);
+	}, [fetchCardData]);
+  
+	const today = new Date().getDate();
 
   return (
     <div className="app">
@@ -62,10 +62,10 @@ const App = () => {
         </div>
       </main>
       <nav className="nav-container">
-        <NavBar />
+        <NavBar onNavBarClick={handleNavBarClick} />
       </nav>
     </div>
   );
-};
+}
 
 export default App;
