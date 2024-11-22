@@ -1,8 +1,9 @@
-import type React from "react"; 
+import type React from "react";
 import { useState, useEffect, useCallback } from "react";
 import CalendarCard from "./components/CalendarCard";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [cardData, setCardData] = useState<CardData | null>(null);
@@ -23,7 +24,7 @@ const App = () => {
     } catch (error) {
       console.error("Error fetching card data:", error);
     }
-  };
+  }, []);
 
   const handleCardClick = () => {
     setShowDate(false);
@@ -36,14 +37,17 @@ const App = () => {
 
   useEffect(() => {
     const today = new Date().getDate();
-    fetchCardData(`/api/dailycards/${today}`);
+    fetchCardData(
+      `https://mere-noel-api-v2.vercel.app/api/dailycards/${today}`
+    );
   }, [fetchCardData]);
 
   const today = new Date().getDate();
 
   return (
     <div className="app">
-      <h1>24 PR avant Noël</h1>
+      <header className="header" />
+      <h1 className="app-title">Calendrier de l'Avent</h1>
       <main>
         <div className="content">
           <p>Bienvenue sur le site où chaque jour compte avant Noël !</p>
@@ -56,9 +60,9 @@ const App = () => {
               onClick={handleCardClick}
             />
           </div>
-        <Link to="/calendar" className="link-to-calendar">
-          Voir le calendrier complet
-        </Link>
+          <Link to="/calendar" className="link-to-calendar">
+            Voir le calendrier complet
+          </Link>
         </div>
       </main>
       <nav className="nav-container">
